@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Share Calculator</title>
+  </head>
+  <body class="container">
+ 
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="{% static 'images/share_graph.png' %}"
+         alt="" width="200" height="150">
+        <h1 class="display-5 text-primary fw-bold">Share Calculator</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">This web application is build for calculating NEPSE Share Buy and Sell amount. 
+              It calculates the Broker Commision rate and SEBON Commision rate accroding to user input. 
+              It automatically calculates the profit or loss from the sold share. 
+              This is <b>version 1.0.0</b> of our application.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+           <a href="{% url 'buyShare' %}"><button type="button" class="btn btn-success btn-lg px-4 gap-3 m-2">Calculate Buying Share</button></a> 
+           <a href="{% url 'sellShare' %}"><button type="button" class="btn btn-danger btn-lg px-4 gap-3 m-2">Calculate Selling Share</button></a> 
+          </div>
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

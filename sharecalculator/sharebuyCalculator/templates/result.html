@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Result</title>
+  </head>
+  <body class="container">
+
+    
+
+    {% block content %}
+    <img class="my-4 mx-auto d-block img-fluid" src="{% static 'images/share_graph.png' %}"
+    alt="" width="200" height="150">
+    
+    <div class="card col-lg-6 offset-lg-3 bg-info pb-5">
+      
+      <div class="card-body">
+       
+        <h5 class="card-title">Buying Share details</h5>
+      </div>
+      <ul class="list-group list-group-flush text-light">
+        <li class="list-group-item bg-secondary">Total Share Amount is <b>{{ share_amount }}</b></li>
+        <li class="list-group-item bg-secondary">Broker Commision is <b>{{ broker_commission }}</b></li>
+        <li class="list-group-item bg-secondary">Sebon Commision is <b>{{ sebon_commision }}</b></li>
+        <li class="list-group-item bg-secondary">DP Charge is <b>{{dp_fee  }}</b></li>
+        <li class="list-group-item bg-secondary">Total Payable Amount is <b>{{ share_buy_calculation }}</b></li>
+        <li class="list-group-item bg-secondary">Cost Per Share(WACC) is <b>{{ cost_per_share }}</b> </li>
+      </ul>
+    </div>
+    
+
+    {% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
